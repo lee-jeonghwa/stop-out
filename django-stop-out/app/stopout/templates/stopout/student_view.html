@@ -1,0 +1,7 @@
+<h1>이름: {{ student.name}}</h1>
+<h2>학교: {{ student.school.name }} </h2>
+
+<h4>친구 목록</h4>
+{% for friend in friends %}
+<p>이름: {{ friend.name }}, 학교:{{ friend.school.name }} </p>
+{% endfor %}

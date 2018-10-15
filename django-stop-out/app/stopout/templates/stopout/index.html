@@ -1,0 +1,17 @@
+
+{% if school_list %}
+    <ul>
+        {% for school in school_list %}
+            <li>
+                 <a href="{% url 'school_view' school.id %}">
+                    {{ school.id }},
+                     {{school.name }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+
+<h2><a href="{% url 'student' %}">전제 학생보기 </a></h2>

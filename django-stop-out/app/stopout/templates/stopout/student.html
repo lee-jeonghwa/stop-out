@@ -1,0 +1,16 @@
+<p>모든 학생 목록이 보여야해요</p>
+
+<h1>전체 학생 목록 보기</h1>
+
+{% if all_student_list %}
+    <ul>
+        {% for student in all_student_list %}
+            <li>
+                <a href="{% url 'student_view' student.id %}">
+                이름: {{ student.name }} 학교: {{ student.school.name }}
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
